@@ -1,0 +1,13 @@
+.vs
+.idea
+.git
+.github
+
+container_data
+container_fs/csgo/sourcemod/plugins/build/
+container_fs/csgo/sourcemod/plugins/*.smx
+
+**/bin
+**/obj
+
+scripts

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aimrank.Agones.Api", "src\Aimrank.Agones.Api\Aimrank.Agones.Api.csproj", "{D0821008-484E-4B1F-AC4E-594689B15AC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aimrank.Agones.Core", "src\Aimrank.Agones.Core\Aimrank.Agones.Core.csproj", "{0811F63C-A184-413D-A44A-B3FC460D09BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aimrank.Agones.Infrastructure", "src\Aimrank.Agones.Infrastructure\Aimrank.Agones.Infrastructure.csproj", "{CF117D20-14DC-425D-BED1-B6BE737063F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0821008-484E-4B1F-AC4E-594689B15AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0821008-484E-4B1F-AC4E-594689B15AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0821008-484E-4B1F-AC4E-594689B15AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0821008-484E-4B1F-AC4E-594689B15AC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0811F63C-A184-413D-A44A-B3FC460D09BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0811F63C-A184-413D-A44A-B3FC460D09BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0811F63C-A184-413D-A44A-B3FC460D09BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0811F63C-A184-413D-A44A-B3FC460D09BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF117D20-14DC-425D-BED1-B6BE737063F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF117D20-14DC-425D-BED1-B6BE737063F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF117D20-14DC-425D-BED1-B6BE737063F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF117D20-14DC-425D-BED1-B6BE737063F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+name: Master build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Run tests
+      shell: bash
+      run: ./scripts/dotnet-test.sh
+
+  docker-build-and-publish:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build Docker image
+      shell: bash
+      run: ./scripts/docker-build.sh latest
+    - name: Publish Docker image
+      shell: bash
+      env:
+        CR_PAT: ${{ secrets.CR_PAT }}
+        CR_USER: ${{ secrets.CR_USER }}
+      run: ./scripts/docker-publish.sh latest

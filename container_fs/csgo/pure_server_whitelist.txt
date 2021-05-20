@@ -1,0 +1,9 @@
+﻿whitelist
+{
+	shaders\...	check_crc
+	materials\...	check_crc
+	models\...		check_crc
+	sound\...		check_crc
+	scripts\...		from_steam
+	particles\...		check_crc
+}
