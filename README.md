@@ -18,16 +18,16 @@ Single CS:GO server instance wrapped with web API project.
 2. Install Metamod
 3. Install Sourcemod
 4. Copy server configuration files
-5. Start web server that is used to manage CS:GO servers
+5. Start web server that is used manage lifetime of CS:GO server.
    
 ## Important
 
 When starting CS:GO server for the first time it has to download all necessary data (~28GB). This might take a while depending on
-your connection. It's saved under /home/steam/csgo and it's persisted inside `container_data` directory.
+your connection. It's saved under `/home/steam/csgo` inside the container. The downloaded data can be persisted on host using volumes and reused.
 
 ## References
 
-Some links that might come handy for developers working on project.
+Some useful links.
 
 1. CS:GO Server
 
