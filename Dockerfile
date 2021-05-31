@@ -42,8 +42,7 @@ RUN DEBIAN_FRONTEND=noninteractive && apt-get update \
       screen \
       libc6-dev \
   && locale-gen en_US.UTF-8 \
-  && adduser --disabled-password --gecos "" steam \
-  && mkdir ${STEAM_CMD_DIR} \
+  && mkdir -p ${STEAM_CMD_DIR} \
   && cd ${STEAM_CMD_DIR} \
   && curl -sSL ${STEAM_CMD_URL} | tar -zx -C ${STEAM_CMD_DIR} \
   && mkdir -p ${STEAM_DIR}/.steam/sdk32 \
@@ -56,11 +55,10 @@ RUN DEBIAN_FRONTEND=noninteractive && apt-get update \
     echo 'app_update ${CSGO_APP_ID}'; \
     echo 'quit'; \
   } > ${STEAM_DIR}/autoupdate_script.txt \
-  && mkdir ${CSGO_DIR} \
-  && chown -R steam:steam ${STEAM_DIR} \
+  && mkdir -p ${CSGO_DIR} \
   && rm -rf /var/lib/apt/lists/*
   
-COPY --chown=steam:steam container_fs/csgo/ ${STEAM_DIR}/
+COPY container_fs/csgo/ ${STEAM_DIR}/
 
 # -- Step 3 -- Compile sourcemod plugins
 
@@ -84,4 +82,4 @@ HEALTHCHECK --interval=30s --timeout=30s --start-period=30s --retries=5 \
   
 ENV ASPNETCORE_ENVIRONMENT=Production
   
-ENTRYPOINT ["dotnet", "Aimrank.Agones.Api.dll"]
+CMD ["dotnet", "Aimrank.Agones.Api.dll"]

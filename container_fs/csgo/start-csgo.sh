@@ -48,6 +48,7 @@ cp $STEAM_DIR/pure_server_whitelist.txt $CSGO_DIR/csgo/pure_server_whitelist.txt
 "$BASH" "$STEAM_DIR/configure_sourcemod.sh"
 
 SRCDS_ARGUMENTS=(
+  "-steamuser 0"
   "-console"
   "-usercon"
   "-game csgo"

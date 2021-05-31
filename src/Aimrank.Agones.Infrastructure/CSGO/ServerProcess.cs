@@ -15,7 +15,7 @@ namespace Aimrank.Agones.Infrastructure.CSGO
         {
             SteamToken = steamToken;
             
-            var shellCommand = $"cd /home/steam/csgo && su steam -s /home/steam/start-csgo.sh {steamToken}";
+            var shellCommand = $"cd /home/steam/csgo && /home/steam/start-csgo.sh {steamToken}";
             
             _process = new Process
             {
@@ -74,8 +74,8 @@ namespace Aimrank.Agones.Infrastructure.CSGO
             {
                 StartInfo = new ProcessStartInfo
                 {
-                    FileName = "su",
-                    Arguments = $"- steam -c \"screen -p 0 -S csgo -X {command}\"",
+                    FileName = "sh",
+                    Arguments = $"-c \"screen -p 0 -S csgo -X {command}\"",
                     CreateNoWindow = true,
                     UseShellExecute = false,
                     RedirectStandardError = true,
